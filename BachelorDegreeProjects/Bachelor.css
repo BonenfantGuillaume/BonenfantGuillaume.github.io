@@ -263,6 +263,29 @@ li {
 	h1 {
 		font-size: 2em;
 	}
+	
+	h2 {
+		font-size: 1.5em;
+	}
+	
+	h3 {
+		font-size: 1.25em;
+	}
+	
+	h4 {
+		font-size: 1em;
+	}
+	
+	.home-btn {
+		font-size: 20px;
+		border-radius: 4px;
+	}
+	
+	.project-part {
+		text-align: start;
+		margin-right: 16px;
+		margin-left: 16px;
+	}
 }
 
 @media only screen and (min-width: 2100px) and (max-width: 2400px){
@@ -272,6 +295,28 @@ li {
 	
 	h1 {
 		font-size: 2.4em
+	}
+	
+	h2 {
+		font-size: 1.8em;
+	}
+	
+	h3 {
+		font-size: 1.5em;
+	}
+	
+	h4 {
+		font-size: 1.2em;
+	}
+	
+	.home-btn {
+		font-size: 24px;
+		border-radius: 5px;
+	}
+
+	.project-part {
+		margin-right: 19px;
+		margin-left: 19px;
 	}
 }
 
@@ -283,6 +328,28 @@ li {
 	h1 {
 		font-size: 2.8em
 	}
+	
+	h2 {
+		font-size: 2.1em;
+	}
+	
+	h3 {
+		font-size: 1.75em;
+	}
+	
+	h4 {
+		font-size: 1.4em;
+	}
+	
+	.home-btn {
+		font-size: 28px;
+		border-radius: 6px;
+	}
+
+	.project-part {
+		margin-right: 22px;
+		margin-left: 2px;
+	}
 }
 
 @media only screen and (min-width: 2800px) and (max-width: 3200px){
@@ -292,6 +359,28 @@ li {
 	
 	h1 {
 		font-size: 3.4em;
+	}
+	
+	h2 {
+		font-size: 2.4em;
+	}
+	
+	h3 {
+		font-size: 2em;
+	}
+	
+	h4 {
+		font-size: 1.7em;
+	}
+	
+	.home-btn {
+		font-size: 32px;
+		border-radius: 7px;
+	}
+
+	.project-part {
+		margin-right: 25px;
+		margin-left: 25px;
 	}
 }
 
@@ -303,6 +392,28 @@ li {
 	h1 {
 		font-size: 4em;		
 	}
+	
+	h2 {
+		font-size: 2.7em;
+	}
+	
+	h3 {
+		font-size: 2.25em;
+	}
+	
+	h4 {
+		font-size: 2em;
+	}
+	
+	.home-btn {
+		font-size: 36px;
+		border-radius: 8px;
+	}
+
+	.project-part {
+		margin-right: 28px;
+		margin-left: 28px;
+	}
 }
 
 @media only screen and (min-width: 3600px){
@@ -312,5 +423,27 @@ li {
 	
 	h1 {
 		font-size: 4.2em;		
+	}
+	
+	h2 {
+		font-size: 3em;
+	}
+	
+	h3 {
+		font-size: 2.5em;
+	}
+	
+	h4 {
+		font-size: 2.1em;
+	}
+	
+	.home-btn {
+		font-size: 60px;
+		border-radius: 9px;
+	}
+
+	.project-part {
+		margin-right: 31px;
+		margin-left: 31px;
 	}
 }

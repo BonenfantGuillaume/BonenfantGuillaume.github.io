@@ -353,6 +353,22 @@ h1 {
 		font-size: 2em;
 	}
 	
+	h2 {
+		font-size: 1.5em;
+	}
+	
+	h3 {
+		font-size: 1.25em;
+	}
+	
+	h4 {
+		font-size: 1em;
+	}
+	
+	.text-part {
+		padding: 16px;
+	}
+
 	.language-text-one {
 		font-size: 1.5em;
 	}
@@ -381,6 +397,22 @@ h1 {
 	
 	h1 {
 		font-size: 2.4em
+	}
+	
+	h2 {
+		font-size: 1.8em;
+	}
+	
+	h3 {
+		font-size: 1.5em;
+	}
+	
+	h4 {
+		font-size: 1.2em;
+	}
+	
+	.text-part {
+		padding: 19px;
 	}
 	
 	.language-text-one {
@@ -421,6 +453,22 @@ h1 {
 		font-size: 2.8em
 	}
 	
+	h2 {
+		font-size: 2.1em;
+	}
+	
+	h3 {
+		font-size: 1.75em;
+	}
+	
+	h4 {
+		font-size: 1.4em;
+	}
+	
+	.text-part {
+		padding: 22px;
+	}
+	
 	.language-text-one {
 		font-size: 2.1em;
 	}
@@ -457,6 +505,22 @@ h1 {
 	
 	h1 {
 		font-size: 3.4em;
+	}
+	
+	h2 {
+		font-size: 2.4em;
+	}
+	
+	h3 {
+		font-size: 2em;
+	}
+	
+	h4 {
+		font-size: 1.7em;
+	}
+	
+	.text-part {
+		padding: 25px;
 	}
 	
 	.language-text-one {
@@ -497,6 +561,22 @@ h1 {
 		font-size: 4em;		
 	}
 	
+	h2 {
+		font-size: 2.7em;
+	}
+	
+	h3 {
+		font-size: 2.25em;
+	}
+	
+	h4 {
+		font-size: 2em;
+	}
+	
+	.text-part {
+		padding: 28px;
+	}
+	
 	.language-text-one {
 		font-size: 2.2em;
 	}
@@ -533,6 +613,22 @@ h1 {
 	
 	h1 {
 		font-size: 4.2em;		
+	}
+	
+	h2 {
+		font-size: 3em;
+	}
+	
+	h3 {
+		font-size: 2.5em;
+	}
+	
+	h4 {
+		font-size: 2.1em;
+	}
+	
+	.text-part {
+		padding: 31px;
 	}
 	
 	.language-text-one {
