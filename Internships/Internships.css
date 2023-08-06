@@ -256,3 +256,66 @@ li {
 	width: 24%;
 	display: inline-block;
 }
+
+
+
+
+@media only screen and (min-width: 1700px) and (max-width: 2100px){
+	.text {
+		font-size: 1em;
+	}
+	
+	h1 {
+		font-size: 2em;
+	}
+}
+
+@media only screen and (min-width: 2100px) and (max-width: 2400px){
+	.text {
+		font-size: 1.2em;
+	}
+	
+	h1 {
+		font-size: 2.4em
+	}
+}
+
+@media only screen and (min-width: 2400px) and (max-width: 2800px){
+	.text {
+		font-size: 1.4em;
+	}
+	
+	h1 {
+		font-size: 2.8em
+	}
+}
+
+@media only screen and (min-width: 2800px) and (max-width: 3200px){
+	.text {
+		font-size: 1.7em;
+	}
+	
+	h1 {
+		font-size: 3.4em;
+	}
+}
+
+@media only screen and (min-width: 3200px) and (max-width: 3600px){
+	.text {
+		font-size: 2em;
+	}
+	
+	h1 {
+		font-size: 4em;		
+	}
+}
+
+@media only screen and (min-width: 3600px){
+	.text {
+		font-size: 2.1em;
+	}
+	
+	h1 {
+		font-size: 4.2em;		
+	}
+}
