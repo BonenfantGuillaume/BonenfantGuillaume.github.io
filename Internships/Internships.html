@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<title>Bonenfant Guillaume Portfolio</title>
+	<link rel="stylesheet" href="Internships.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">	
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	
+	<script>
+		let currentDisplay = "none";
+		function changeDisplay(project) {
+			if (currentDisplay != project)
+			{
+				activateDisplay(project);
+			}
+			else
+			{
+				stopDisplay();
+			}
+		}
+	
+		function activateDisplay(project) {
+			var width = window.innerWidth;
+			document.getElementById("main").style.width = "100%";
+			var projects = document.getElementsByClassName("project");
+			var refs = document.getElementsByClassName("ref");
+
+			if (width >= 1000){
+				document.getElementById("projects-wrapper").style.gridTemplateColumns = "repeat(2, 1fr)";
+				document.getElementById("switch").style.gridTemplateColumns = "repeat(2, 1fr)";
+
+				for (i = 0; i < projects.length; i++)
+				{
+					projects[i].style.width = "20vw";
+					projects[i].style.height = "20vw";
+				}
+
+				for (i = 0; i < refs.length; i++)
+				{
+					refs[i].style.width = "20vw";
+				}
+			}
+			else if (width >= 800)
+			{
+				document.getElementById("projects-wrapper").style.gridTemplateColumns = "repeat(1, 1fr)";			
+				document.getElementById("switch").style.gridTemplateColumns = "repeat(2, 1fr)";
+
+				for (i = 0; i < projects.length; i++)
+				{
+					projects[i].style.width = "30vw";
+					projects[i].style.height = "30vw";
+				}
+
+				for (i = 0; i < refs.length; i++)
+				{
+					refs[i].style.width = "30vw";
+				}
+			
+				document.getElementById("switch1").style.width = "40vw";
+				document.getElementById("switch2").style.width = "60vw";
+			}
+			else
+			{
+				document.getElementById("switch1").style.width = "80%";
+				document.getElementById("switch1").style.marginLeft = "10%";
+				document.getElementById("switch").style.gridTemplateColumns = "repeat(1, 1fr)";
+			}			
+			
+			document.getElementById("switch2").style.display = "inline";
+
+			if (currentDisplay != "none")
+				document.getElementById(currentDisplay).style.display = "none";
+			currentDisplay = project;
+			document.getElementById(currentDisplay).style.display = "inline";
+			
+		}
+		
+		function stopDisplay(project) {
+			var width = window.innerWidth;
+			document.getElementById("projects-wrapper").style = null;
+			document.getElementById("switch").style = null;
+			document.getElementById("switch1").style = null;
+			document.getElementById("switch2").style = null;
+			document.getElementById("main").style = null;
+			
+			var projects = document.getElementsByClassName("project");
+			var refs = document.getElementsByClassName("ref");
+			
+			for (i = 0; i < projects.length; i++)
+			{
+				projects[i].style = null;
+			}
+
+			for (i = 0; i < refs.length; i++)
+			{
+				refs[i].style = null;
+			}
+
+			document.getElementById(currentDisplay).style.display = "none";
+			currentDisplay = "none";
+		}
+	</script>
+</head>
+
+
+  
+<body style="height: 100%; margin: 0; font-family: Roboto;">
+<div id="top" class="base" style="width: 100%; margin: 0; padding: 0;">
+	<a class="home-btn" href="../index.html">Home</a>
+	<h1 style="width: 50%; margin-left: 25%;">Master Degree Projects</h1>
+	<main id="main">
+		<div id="switch">
+			<div id="switch1">
+				<div id="projects-wrapper">
+					<div style="margin-left: auto; margin-right: auto;">
+						<a href="#quixxo" class="no-link-properties">
+							<div class="project" onClick="changeDisplay('quixxo');">
+								<img class="img" src="Pharma/Pharma.jpg">
+								<h2 class="project-name">
+									Pharmeceutical data visualization
+								</h2>
+								<div class="skills">React<br>Chart.js<br>Balsamiq<br>Design<br>Jira</div>
+							</div>
+						</a>
+						<div class="ref">https://www.wallpaperflare.com/selective-focus-photography-of-assorted-medication-pills-medical-wallpaper-wfzyd</div>
+					</div>
+					<div style="margin-left: auto; margin-right: auto;">
+						<a href="#AI" class="no-link-properties">
+							<div class="project" onClick="changeDisplay('AI');">
+								<img class="img" src="AI/AI.jpg">
+								<h2 class="project-name">
+									AI
+								</h2>
+								<div class="skills">AI basics<br>Recurrent Neural Network<br>Python<br>PyTorch</div>
+							</div>
+						</a>
+						<div class="ref">https://www.wallpaperflare.com/blood-veins-illustration-artificial-intelligence-brain-think-wallpaper-zbavl</div>
+					</div>
+				</div>
+			</div>
+			<div id="switch2" style="display: none;">
+				<div id="quixxo" class="project-explanation">
+					<h1>Pharmaceutical data visualization</h1>
+					<div class="project-part">
+						<h2 class="project-title-part">About the internship</h2>
+						<div class="paragraph">
+							This internship is a two-months internship made in a pair with another student in the <a href="https://www.focussia.com/" target="_blank">Focussia company<a/>.
+							The aim of this internship was at first to make a design for the company's project and then to start developing it, but knowing we wouldn't have the time to finish it because it's a big project that requires a lot of time.
+						</div>
+						<h2 class="project-title-part">The project</h2>
+						<div class="paragraph">
+							It was a pharmaceutical project for which we had to display data for machines that were preparing medicines, like the heat, number of turns per minute and more to facilitate looking for anomalies.
+						</div>
+						<h2 class="project-title-part">Our design</h2>
+						<div class="paragraph">
+							A big advantage of being a pair to work on this project was that because design is pretty subjetive, we could share and judge each other ideas pretty easily, and advance together.
+							To think about and make the design of the project, we mainly used the balsamiq website.
+							In our final design, the main design takes were to be able to add and delete as many charts as the user wants and to be able to personalize them, choosing which data to display, so for example the user would be able to have certain charts for certain data.
+							Then the user would be able to select whether he wants to see real-time data or data on a specific date and time.
+							He would also be able to make the chart full screen by clicking on it or going into a specific mode that would allow him to see the exact data for the lines where the cursor is pointing at.
+						</div>
+						<h2 class="project-title-part">Developing </h2>
+						<div class="paragraph">
+							For the development, we decided to use React which is a great choice to make single-page applications and to use Chart.js for our website's charts which seemed to be a great fit.
+							We also used Jira to follow our progress as an agile team.
+							We didn't have the time to develop a lot the web-app but still we have been able to do a few things like the top bar with real time being displayed, to build a first chart that was linked to a legend so the user could choose which data to display and which not to and also a search bar to look easily for the different data.
+						</div>
+						<h2>Report and sources</h2>
+						<div class="paragraph" style="padding-bottom: 20px;">
+							Unfortunately, I can not share any source code or picture from this project.
+						</div>
+					</div>
+				</div>
+				
+				
+				
+				
+				<div id="AI" class="project-explanation">
+					<h1>AI</h1>
+					<div class="project-part">
+						<h2 class="project-title-part">About the internship</h2>
+						<div class="paragraph">
+							This internship was a one month internship in my university's lab.
+							The aim was to learn the basics of AIs because I had no prior knowledge and wanted to learn a little about it.
+							It actually looked more like a simple course one on one with a teacher rather than a real internship.
+						</div>
+						<h2>Project</h2>
+						<div class="paragraph">
+							At first I learnt the very basics of AIs, how they learn using backpropagation and how they make choices.
+							Then I also learnt the basics of recurrent neural networks (RNN) through scientific papers.
+							All this took about two weeks or so before starting the real project.<br>
+							
+							The aim of the real project was to build an AI that would be able to predict if a movie review is positive or negative according to the text of it.
+							The teacher sent me a data sample of movie reviews and also an already existing Recurrent Neural Network and told me to try to understand it and adapt it.
+							For these last two weeks I tried to understand the code behind what had been given to me and to see how I could use it in my project.
+							I could eventually do something with it and have a decent result (around 80% accuracy if I remember well).<br>
+						</div>
+						<h2>My opinion on this internship</h2>
+						<div class="paragraph">
+							My opinion on this internship is that my main goal which was learning the very basics of AIs was fulfilled.
+							I might not have developped a lot on my own and not have built my own model but it is a pretty difficult task that was obviously not doable with no prior knowledge in this domain in one month.<br>
+							The main negative point of it was that it was mainly a remote internship and I could barely see my internship master and it was hard to ask for help when it was needed.
+							I also couldn't be in a working environment with other people around me which I would have greatly liked.
+						</div>
+						<h2>Report and sources</h2>
+						<div class="paragraph" style="padding-bottom: 20px;">
+							Unfortunately, I can not share any source code or picture from this project.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</div>

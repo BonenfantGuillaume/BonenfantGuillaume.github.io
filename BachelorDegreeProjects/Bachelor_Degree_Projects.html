@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="utf-8">
+	<title>Bonenfant Guillaume Portfolio</title>
+	<link rel="stylesheet" href="Bachelor.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">	
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	
+	<script>
+		let currentDisplay = "none";
+		function changeDisplay(project) {
+			if (currentDisplay != project)
+			{
+				activateDisplay(project);
+			}
+			else
+			{
+				stopDisplay();
+			}
+		}
+	
+		function activateDisplay(project) {
+			var width = window.innerWidth;
+			document.getElementById("main").style.width = "100%";
+			var projects = document.getElementsByClassName("project");
+			var refs = document.getElementsByClassName("ref");
+
+			if (width >= 1000){
+				document.getElementById("projects-wrapper").style.gridTemplateColumns = "repeat(2, 1fr)";
+				document.getElementById("switch").style.gridTemplateColumns = "repeat(2, 1fr)";
+
+				for (i = 0; i < projects.length; i++)
+				{
+					projects[i].style.width = "20vw";
+					projects[i].style.height = "20vw";
+				}
+
+				for (i = 0; i < refs.length; i++)
+				{
+					refs[i].style.width = "20vw";
+				}
+			}
+			else if (width >= 800)
+			{
+				document.getElementById("projects-wrapper").style.gridTemplateColumns = "repeat(1, 1fr)";			
+				document.getElementById("switch").style.gridTemplateColumns = "repeat(2, 1fr)";
+
+				for (i = 0; i < projects.length; i++)
+				{
+					projects[i].style.width = "30vw";
+					projects[i].style.height = "30vw";
+				}
+
+				for (i = 0; i < refs.length; i++)
+				{
+					refs[i].style.width = "30vw";
+				}
+			
+				document.getElementById("switch1").style.width = "40vw";
+				document.getElementById("switch2").style.width = "60vw";
+			}
+			else
+			{
+				document.getElementById("switch1").style.width = "80%";
+				document.getElementById("switch1").style.marginLeft = "10%";
+				document.getElementById("switch").style.gridTemplateColumns = "repeat(1, 1fr)";
+			}			
+			
+			document.getElementById("switch2").style.display = "inline";
+
+			if (currentDisplay != "none")
+				document.getElementById(currentDisplay).style.display = "none";
+			currentDisplay = project;
+			document.getElementById(currentDisplay).style.display = "inline";
+		}
+		
+		function stopDisplay(project) {
+			var width = window.innerWidth;
+			document.getElementById("projects-wrapper").style = null;
+			document.getElementById("switch").style = null;
+			document.getElementById("switch1").style = null;
+			document.getElementById("switch2").style = null;
+			document.getElementById("main").style = null;
+			
+			var projects = document.getElementsByClassName("project");
+			var refs = document.getElementsByClassName("ref");
+			
+			for (i = 0; i < projects.length; i++)
+			{
+				projects[i].style = null;
+			}
+
+			for (i = 0; i < refs.length; i++)
+			{
+				refs[i].style = null;
+			}
+
+			document.getElementById(currentDisplay).style.display = "none";
+			currentDisplay = "none";
+		}
+	</script>
+</head>
+
+
+  
+<body style="height: 100%; margin: 0; font-family: Roboto;">
+<div id="top" class="base" style="width: 100%; margin: 0; padding: 0;">
+	<a class="home-btn" href="../index.html">Home</a>
+	<h1 style="width: 50%; margin-left: 25%;">Bachelor Degree Projects</h1>
+	<main id="main">
+		<div id="switch">
+			<div id="switch1">
+				<div id="projects-wrapper">
+					<div style="margin-left: auto; margin-right: auto;">
+						<a href="#city" class="no-link-properties">
+							<div class="project" onClick="changeDisplay('city');">
+								<img class="img" src="Smart_City/Smart_City.jpg">
+								<h2 class="project-name">
+									Smart City
+								</h2>
+								<div class="skills">Big group project<br>Design thinking<br>Arduino<br>C++<br></div>
+							</div>
+						</a>
+						<div class="ref">https://pixabay.com/fr/photos/ville-intelligent-moderne-avenir-4317139/</div>
+					</div>
+					<div style="margin-left: auto; margin-right: auto;">
+						<a href="#harness" class="no-link-properties">
+							<div class="project" onClick="changeDisplay('harness');">
+								<img class="img" src="Harness/Dog_Harness.jpg">
+								<h2 class="project-name">
+									Smart harness
+								</h2>
+								<div class="skills">Group project<br>Design thinking<br>entrepreneurship learning</div>
+							</div>
+						</a>
+						<div class="ref">https://www.wallpaperflare.com/sweden-amstaff-american-staffordshire-dog-puppy-rottweiler-wallpaper-eyxpo</div>
+					</div>
+					<div style="margin-left: auto; margin-right: auto;">
+						<a href="#web-parser" class="no-link-properties">
+							<div class="project" onClick="changeDisplay('web-parser');">
+								<img class="img" src="Crawler/Crawler.png">
+								<h2 class="project-name" style="width: 60%;">
+									Web parser and analysis
+								</h2>
+								<div class="skills">One year project<br>Java<br>Eclipse</div>
+							</div>
+						</a>
+					</div>
+					<div style="margin-left: auto; margin-right: auto;">
+						<a href="#life-game" class="no-link-properties">
+							<div class="project" onClick="changeDisplay('life-game');">
+								<img class="img" src="Life_Game/Life_Apple.png">
+								<h2 class="project-name">
+									Life simulation game
+								</h2>
+								<div class="skills">Group project<br>Design thinking<br>Java</div>
+							</div>
+						</a>
+						<div class="ref">https://pixabay.com/fr/illustrations/pomme-pomme-rouge-fruit-coup%C3%A9-6810736/</div>
+					</div>
+				</div>
+			</div>
+			<div id="switch2" style="display: none;">
+				<div id="city" class="project-explanation">
+					<h1>Smart City</h1>
+					<div class="project-part">
+						<h2 class="project-title-part">The project</h2>
+						<div class="paragraph">
+							This project was a group project including the whole class (about 20 people) in it, with everyone working on a specific task.
+							The aim was to create a miniature model of a smart city, with for examples automatic car parks, lights getting on and off automatically when someone passes by, automatic cars and so on.
+							We made this project on our bachelor's degree first year so we lacked knowledge to go fast enough to go through the whole project but everyone did his best and we made a good beginning for the project.
+						</div>
+						<h2 class="project-title-part">My task</h2>
+						<div class="paragraph">
+							I was personally in charge of developing automatic barriers for car parks.<br>
+							I had to learn the very basics of Arduino programming to be able to make at first a barrier gets up and down (opens and closes).
+							Then I had to learn about the RFID technology, how it works and how to manipulate it so I can do what I want with it.
+							The result was that the barrier could open and close so the car would be able to go through
+						</div>
+						<h2 class="project-title-part">Personnal opinion</h2>
+						<div class="paragraph">
+							My thought on the project is that it was a pretty interesting one, with a great goal and something concrete to build.
+							It was not too easy because we were full beginners in this domain and so was a little challenging.
+							I was also happy having been able to succeed to my task because I started it from scratch and with absolutely no knowledge, even though it does not look hard from my perspective now.
+						</div>
+						
+
+<!--						<h2>Development</h2>
+						<div class="paragraph">
+							I'm going to detail here only our most important choices for developing the application. For a bigger picture about our project, please download the report <a href="#winer-report">down below.</a>
+						</div>
+						<h3>Diagrams</h3>
+						<div class="paragraph">
+							To go through the application development, we had to start by thinking about the application and so we made different diagrams like a usecase one and sequence diagrams.
+							<div class="container">
+								<img src="" style="width: 80%; margin-left: 10%;">
+								<div class="legend">Usecase diagram for our application (language: French)</div>
+							</div>
+						</div>
+						<h3>Programming language</h3>
+						<div class="paragraph">
+							Then we had to look for a programming language for our application.<br>
+							For the front-end, among all our research, we ended up with a few choices like Flutter and Ionic.
+							Because we didn't have any knowledge about Flutter and the dart programming language and that it seemded to take longer to adapt to it,
+							we decided to use Ionic that looked more simple because it uses typescript and we already had knowledge about it.<br>
+							For the back-end, we had a few choices between NodeJS, Flask and symphony. We decided to go for NodeJS because it has all the functionnalities we needed and it is well documented and a widely spread choice, with a big community around.
+						</div>
+						<h3>Design</h3>
+						<div class="paragraph">
+							For the design of our application, we aimed for something more or so simple because it was not the main core of our application.
+							<div class="container">
+								<img src="" style="width: 80%; margin-left: 10%;">
+								<div class="legend">Sketches for our application (language: French)</div>
+							</div>
+							The final design was relatively close to our aim.
+							<div class="container">
+								<img src="" style="width: 20%; margin-left: 25%;">
+								<img src="" style="width: 20%; margin-left: 10%;">
+								<div class="legend">Final design of the application (language: French)</div>
+							</div>
+						</div>
+						<h2>Project report</h2>
+						<div class="paragraph">
+							You can find the project's report in the following pdf file (language: French).
+						</div>
+						<div class="paragraph">
+							<a id="winer-report" href="Winer/Report_Winer.pdf" download="Report_Winer" target="_blank"><i class="bi bi-download" style="margin-right: 10px;"></i>Download report</a>
+						</div>-->
+					</div>
+				</div>
+				<div id="harness" class="project-explanation">
+					<h1>Smart Harness</h1>
+					<div class="project-part">
+						<h2 class="project-title-part">The project</h2>
+						<div class="paragraph">
+							This project was a 2 years project with a group of 4.
+							It all started when we had in class to think about different innovative projects, things that did not exist.
+							We had to do a brain storming and to think several weeks about possible project ideas and how they could take form.
+							Once we found our idea, the dog smart harness, we had to think about what would be our product main functions, how we could develop them as well as the product itself, discuss with researchers about the feasability, estimate the cost.
+						</div>
+						<h2 class="project-title-part">Personnal opinion</h2>
+						<div class="paragraph">
+							My personal thought on this project was that it was pretty interesting even though it didn't lead to anything in the end.
+							With this project I've been able to learn the very basics of entrepreneurship, the different steps to go through to develop a product, and also to increase my capacity to innovate and to search for things by myself.
+						</div>
+					</div>
+				</div>
+				<div id="web-parser" class="project-explanation">
+					<h1>Web parser</h1>
+					<div class="project-part">
+						<h2 class="project-title-part">The project</h2>
+						<div class="paragraph">
+							This project was a 4-person group project during a whole year.<br>
+							The goal of this project was to be able to parse every links that we could find starting up from a specific link and to then parse every links found and to continue like that until no more new link found.
+							Then we had to build a user interface so the user would be easily able to start the parsing, to display a network graph that we can build up using all these parsed links, interesting statistics and some other things.
+						</div>
+						<h2 class="project-title-part">My tasks</h2>
+						<div class="paragraph">
+							For this project, I was personally in charge of creating a part of the user interface as well as parsing and analysing "Robots.txt" and "sitemap" files, understanding and processings statistics.<br>
+							For the user interface, we had to use JavaFX which was the first time I had to make a user interface and so had to learn a lot of things about it.<br>
+							For the statistics part, I had to learn and to know how to process local and global transitivity, distance using the Dijkstra algorithm, reciprocity and the assortativity coefficient.
+						</div>
+						<h2 class="project-title-part">Personnal opinion</h2>
+						<div class="paragraph">
+							It was a challenging and interesting project, my first one that was that long, that had to be done that cautiously, with a git that needed to be clean enough and to respect a lot of requests.
+							We all had very separated tasks and it felt like our first real project which I enjoyed a lot.
+						</div>
+						<h2>Report and sources</h2>
+						<div class="paragraph">
+							You can find the project and its report in the following zip file (language: French).
+						</div>
+						<div class="paragraph">
+							<a href="Crawler/Web_Crawler.zip" download="Web_Crawler"><i class="bi bi-download" style="margin-right: 10px;"></i>Download project</a>
+						</div>
+					</div>
+				</div>
+				<div id="life-game" class="project-explanation">
+					<h1>Life simulation game</h1>
+					<div class="project-part">
+						<h2 class="project-title-part">The project</h2>
+						<div class="paragraph">
+							The life simulation game project was a 3-person group project.<br>
+							In this game the player start with a character of his choice between 3 selectable that have different characteristics.
+							There is one that can for example drive a car. They all have a certain number of life, hunger, hydration and moral and if one of them reaches 0, the character dies.
+							On every actions, they use randomly a little of these characteristics.<br>
+							To move, there is a map compound of different types of cases, like for example simple roads, traps, university, fast food, and more.
+							Each case has a specific result, for example the fast food fills the character's hunger bar, whereas when going to the university, the characters has a chance of getting his diploma.
+							The goal of the this game is to get the maximum of diploma as there is no limit for this.
+						</div>
+						<h2 class="project-title-part">Personnal opinion</h2>
+						<div class="paragraph">
+							My thought on this project was that it was pretty fun and interesting.
+							I also liked the fact to be able to develop this project in a group of 3.
+							We have been able to discuss very well the design of the project using diagrams, how we wanted to build it and to take advantage greatly of the object-oriented programming.
+							<div id="Life_Game_Diagram" class="container">
+								<img src="Life_Game/Class_Diagram.png" style="width: 90%; margin-left: 5%;">
+								<div class="legend">Class diagram of our project</div>
+							</div>
+						</div>
+						<h2>Report and sources</h2>
+						<div class="paragraph">
+							You can find the project and its report in the following zip file (language: French).
+						</div>
+						<div class="paragraph">
+							<a href="Life_Game/Life_Game.zip" download="Life_Game"><i class="bi bi-download" style="margin-right: 10px;"></i>Download project</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+</div>
